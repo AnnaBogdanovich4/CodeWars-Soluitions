@@ -17,3 +17,8 @@ function solution(number){
     }
     return arr.reduce((a,b) => a+b)
 }
+
+function solution(number){
+    let arrNumber = (Array.from({length: number-1}, (_, index) => index + 1));
+    return arrNumber.filter(el => !(el % 3) ||!(el % 5)).reduce((el,sum)=>sum+el,0)
+}
